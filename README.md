@@ -4,10 +4,14 @@
 
 ## 주요 기능
 
-- 할 일 추가 / 완료 처리
-- 카테고리별 필터링
-- 검색 및 정렬
+- 할 일 추가 / 수정 / 삭제 / 완료 처리
+- 우선순위(높음·보통·낮음) 및 마감일 지정
+- 카테고리(업무·개인·쇼핑) 지정 및 필터링
+- 진행 상태(전체·진행중·완료) 필터링
+- 제목 검색
+- 정렬(생성일순 · 이름순 · 마감일순)
 - 다크 모드 (<kbd>d</kbd> 키로 토글)
+- localStorage를 이용한 로컬 저장
 
 ## 관련 링크
 
@@ -21,6 +25,7 @@
 - Tailwind CSS v4
 - shadcn/ui (radix-maia 스타일, taupe 베이스)
 - TypeScript / ESLint / Prettier
+- Vitest / Testing Library
 - 패키지 매니저: bun 1.3.6
 
 ## 시작하기
@@ -45,12 +50,13 @@ bun run test       # 테스트 실행 (Vitest)
 bun run test:watch # 테스트 watch 모드
 ```
 
-## 챕터별 시작 브랜치
+## 프로젝트 구조
 
-각 레슨은 시작 시점의 코드 상태를 브랜치로 제공합니다. 레슨 본문에서 안내하는 브랜치로 전환한 뒤 따라가시면 됩니다.
-
-```shell
-git checkout ch02-03
+```
+app/                 라우트 및 페이지 (App Router)
+components/          Todo 관련 컴포넌트 및 shadcn/ui 컴포넌트(components/ui)
+hooks/               상태 관리 훅 (use-todos 등)
+lib/                 타입 정의 및 유틸 함수
 ```
 
 ## 컴포넌트 추가
