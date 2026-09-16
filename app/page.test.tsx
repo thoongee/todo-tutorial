@@ -6,7 +6,7 @@ describe("Page 제목", () => {
     render(<Page />);
 
     expect(
-      screen.getByRole("heading", { name: "✨ 할 일" })
+      screen.getByRole("heading", { name: "✨ 오늘의 할 일" })
     ).toBeInTheDocument();
   });
 });
